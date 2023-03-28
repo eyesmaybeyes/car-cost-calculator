@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Калькулятор стоимости авто</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/normalize.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body>
+        <main>
+            <section class="calculator">
+                <h2 class="calculator__title">Калькулятор стоимости авто</h2>
+                <form id="form" onsubmit="return false">
+                    <fieldset class="form-section">
+                        <label for="carBrand">Марка автомобиля</label>
+                        <select class="form-select" id="carBrands">
+                            <option selected name="carBrand" value="genesis">
+                                Genesis
+                            </option>
+                            <option name="carBrand" value="opel">Opel</option>
+                            <option name="carBrand" value="suzuki">
+                                Suzuki
+                            </option>
+                            <option name="carBrand" value="subaru">
+                                Subaru
+                            </option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <label for="carModel">Модель автомобиля</label>
+                        <select class="form-select" id="carModel">
+                            <option selected name="carModel">G-70</option>
+                            <option name="carModel">G-80</option>
+                            <option name="carModel">G-90</option>
+                            <option name="carModel">GV-70</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <label for="fuel">Тип топлива</label>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="fuel"
+                                id="gasolineFuel"
+                                value="100000"
+                            />
+                            <label for="gasolineFuel">
+                                Бензин (включая гибрид)
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="fuel"
+                                id="dieselFuel"
+                                value="200000"
+                            />
+                            <label for="dieselFuel"> Дизельное топливо </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="fuel"
+                                id="electricFuel"
+                                value="300000"
+                            />
+                            <label for="electricFuel"> Электрический </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <label>Тип услуги</label>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="90000"
+                                id="allCar"
+                                name="service"
+                            />
+                            <label for="allCar"> Целый автомобиль </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="50000"
+                                id="lightCutting"
+                                name="service"
+                            />
+                            <label for="lightCutting"> Распил легковой </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="15000"
+                                name="service"
+                                id="frameCut"
+                            />
+                            <label for="frameCut"> Распил рамный </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="70000"
+                                name="service"
+                                id="construction"
+                            />
+                            <label for="construction">
+                                Конструктор легковой
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="75000"
+                                id="constructionEu"
+                                name="service"
+                            />
+                            <label for="constructionEu">
+                                Конструктор джип, м/а, европ. марки
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                value="50000"
+                                id="spares"
+                                name="service"
+                            />
+                            <label for="spares"> Запчасти на палете </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <label for="carCondition">Состояние автомобиля</label>
+                        <select class="form-select" id="carCondition">
+                            <option selected name="condition" value="3">
+                                Новый
+                            </option>
+                            <option name="condition" value="1.5">
+                                Подержанный
+                            </option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <label for="payment-method">Способ оплаты</label>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment-method"
+                                id="card"
+                            />
+                            <label for="card">Картой</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment-method"
+                                id="cash"
+                            />
+                            <label for="cash">Наличными</label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment-method"
+                                id="legal-entity"
+                            />
+                            <label for="legal-entity"
+                                >Счёт на юридическое лицо</label
+                            >
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="engineCapacity">Объём двигателя</label>
+                        <input
+                            id="engineCapacity"
+                            name="engineCapacity"
+                            type="text"
+                            minlength="1"
+                            maxlength="3"
+                            placeholder="от 1.1 до 3.5 литров"
+                        />
+                    </div>
+                    <div class="form__button">
+                        <button class="btn" id="button" type="submit">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script src="./main.js"></script>
+    </body>
+</html>

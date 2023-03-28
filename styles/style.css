@@ -1,0 +1,81 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5vmin;
+    background-color: rgb(250, 235, 211);
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+.calculator {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    border: 1px solid #d7dfe3;
+}
+
+.calculator__title {
+    text-align: center;
+    color: black;
+}
+
+.form-group {
+    padding: 10px 0;
+}
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.btn {
+    border-radius: 50px;
+    border: none;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background-color: rgb(235, 90, 59);
+    color: #fff;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(0deg, rgb(235, 90, 59), rgb(179, 32, 32));
+}
+
+@media (min-width: 320px) {
+    .btn {
+        height: 30px;
+        width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .btn {
+        height: 50px;
+        width: 35%;
+    }
+}
+@media (min-width: 1024px) {
+    .btn {
+        height: 50px;
+        width: 25%;
+    }
+}
+@media (min-width: 1280px) {
+    .btn {
+        height: 60px;
+        width: 25%;
+    }
+}

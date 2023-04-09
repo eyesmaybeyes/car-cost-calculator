@@ -20,7 +20,7 @@
                 <h2 class="calculator__title">Калькулятор стоимости авто</h2>
                 <form id="form" onsubmit="return false">
                     <fieldset class="form-section">
-                        <label for="carBrand">Марка автомобиля</label>
+                        <label for="carBrands">Марка автомобиля</label>
                         <select class="form-select" id="carBrands">
                             <option selected name="carBrand" value="genesis">
                                 Genesis
@@ -37,10 +37,12 @@
                     <fieldset class="form-section">
                         <label for="carModel">Модель автомобиля</label>
                         <select class="form-select" id="carModel">
-                            <option selected name="carModel">G-70</option>
-                            <option name="carModel">G-80</option>
-                            <option name="carModel">G-90</option>
-                            <option name="carModel">GV-70</option>
+                            <option selected name="carModel" value="0">
+                                G-70
+                            </option>
+                            <option name="carModel" value="1">G-80</option>
+                            <option name="carModel" value="2">G-90</option>
+                            <option name="carModel" value="3">GV-70</option>
                         </select>
                     </fieldset>
                     <fieldset class="form-section">

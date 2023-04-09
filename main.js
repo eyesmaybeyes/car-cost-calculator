@@ -34,42 +34,39 @@ dom.driveBrands.addEventListener("change", function () {
 });
 
 const countPrice = () => {
-    let totalPrice = 0;
+    let totalPrice;
     let carBrandValue = document.getElementById("carBrands").value;
     let carModelValue = document.getElementById("carModel").value;
 
     // стоимость марки машины 
-    if (carBrandValue == 'genesis') {
-        totalPrice = 2000000;
-        console.log(totalPrice)
-    } else if (carBrandValue == 'opel') {
-        totalPrice = 3500000;
-        console.log(totalPrice)
+    switch (carBrandValue) {
+        case 'genesis':
+            totalPrice = 2000000;
+            break;
+        case 'opel':
+            totalPrice = 3500000;
+            break;
+        case 'suzuki':
+            totalPrice = 5000000;
+            break;
+        case 'subaru':
+            totalPrice = 6000000;
+            break;
     }
-    else if (carBrandValue == 'suzuki') {
-        totalPrice = 5000000;
-        console.log(totalPrice)
-    }
-    else {
-        totalPrice = 6000000;
-        console.log(totalPrice)
-    }
-
     // Стоимость модели машины
-    if (carModelValue == '0') {
-        totalPrice += 20000;
-        console.log(totalPrice)
-    } else if (carModelValue == '1') {
-        totalPrice += 50000;
-        console.log(totalPrice)
-    }
-    else if (carModelValue == '2') {
-        totalPrice += 60000;
-        console.log(totalPrice)
-    }
-    else {
-        totalPrice += 80000;
-        console.log(totalPrice)
+    switch (carModelValue) {
+        case '0':
+            totalPrice += 20000;
+            break;
+        case '1':
+            totalPrice += 50000;
+            break;
+        case '2':
+            totalPrice += 60000;
+            break;
+        case '3':
+            totalPrice += 80000;
+            break;
     }
 
     for (let i = 0; i < dom.fuel.length; i++) {
@@ -98,16 +95,13 @@ const countPrice = () => {
 
     if (dom.engine.value == highEngine) {
         totalPrice *= 1.3;
-        console.log(totalPrice);
     } else if (
         dom.engine.value < highEngine &&
         dom.engine.value > mediumEngine
     ) {
         totalPrice *= 0.8;
-        console.log(totalPrice);
     } else {
         totalPrice *= 0.4;
-        console.log(totalPrice);
     }
 
     alert(`Стоимость вашего автомобиля составила ${totalPrice} рублей!`);

@@ -5,11 +5,8 @@
 
 ## Getting started
 
-In the project directory, you can run:
-```
-npm install
-npm start
-```
+Host the parent directory on the webserver
+
 ## Technologies:
 <p>
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg" alt="JS" width="50px"/>
